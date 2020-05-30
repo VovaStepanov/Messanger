@@ -26,6 +26,7 @@ body {
   background-color: grey;
 }
 .slideout-menu ul li a {
+  font-size: 30px;
   color: #001D26;
 }
 .slideout-menu-left {
