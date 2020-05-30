@@ -15,7 +15,9 @@
   "build": {
     "appId": "app",
     "win": {
-      "target": ["nsis"],
+      "target": [
+        "nsis"
+      ],
       "requiredExecutionLevel": "requireAdministrator"
     },
     "nsis": {
