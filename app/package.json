@@ -1,6 +1,6 @@
 {
   "name": "app",
-  "productName": "app",
+  "productName": "Test1",
   "version": "1.0.0",
   "description": "My Electron application description",
   "main": "src/index.js",
@@ -9,7 +9,20 @@
     "package": "electron-forge package",
     "make": "electron-forge make",
     "publish": "electron-forge publish",
-    "lint": "echo \"No linting configured\""
+    "lint": "echo \"No linting configured\"",
+    "build-installer": "electron-builder"
+  },
+  "build": {
+    "appId": "app",
+    "win": {
+      "target": ["nsis"],
+      "requiredExecutionLevel": "requireAdministrator"
+    },
+    "nsis": {
+      "license": "license.txt",
+      "oneClick": false,
+      "allowToChangeInstalationDirectory": true
+    }
   },
   "keywords": [],
   "author": {
