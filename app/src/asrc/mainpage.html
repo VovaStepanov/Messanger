@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Test1</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/hamburgers.min.css">
+    <link rel="stylesheet" href="css/slideout.css">
+    <link rel="stylesheet" href="css/mainpage.css">
+  </head>
+  <nav class="section-header__burger__menu" id = 'menu'>
+    <ul >
+      <li><a href="#">Friends</a></li>
+      <li><a href="#">Settigs</a></li>
+    </ul>
+  </nav>
+  <body>
+    <div class="wrapper" id="panel">
+      <!-- header -->
+      <section class="section-outer section-header">
+        <div class="section-inner">
+          <div class="section-header__burger">
+            <button class="hamburger hamburger--collapse" type="button">
+              <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+              </span>
+            </button>
+          </div>
+          <div class="section-header__user">
+            <div class="section-header__user-icon">
+              <img src="upload_images/user.jpeg" alt="icon">
+            </div>
+            <div class="section-header__user-name">
+              <h3>Yoda</h3>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /header -->
+
+      <!-- content -->
+      <section class="section-outer section-content">
+        <div class="section-inner">
+
+        </div>
+      </section>
+      <!-- /content -->
+    </div>
+    <script src = 'js/jquery.js'></script>
+    <script src = 'js/slideout.min.js'></script>
+    <script>
+      var slideout = new Slideout({
+        'panel': document.getElementById('panel'),
+        'menu': document.getElementById('menu'),
+        'padding': 256,
+        'tolerance': 70
+      });
+      $('.hamburger').on('click', function() {
+        slideout.toggle();
+      });
+    </script>
+    <script>
+      var $hamburger = $(".hamburger");
+	    $hamburger.on("click", function(e) {
+	      $hamburger.toggleClass("is-active");
+	  });
+    </script>
+  </body>
+</html>
