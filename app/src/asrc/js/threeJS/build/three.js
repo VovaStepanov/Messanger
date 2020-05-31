@@ -21433,7 +21433,7 @@
 			return useOffscreenCanvas ?
 				new OffscreenCanvas( width, height ) :
 				document.createElementNS( 'http://www.w3.org/1999/xhtml', 'canvas' );
-
+				OffscreenCanvas.className = 'WebGL';
 		}
 
 		function resizeImage( image, needsPowerOfTwo, needsNewCanvas, maxSize ) {
