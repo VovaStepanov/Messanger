@@ -1463,7 +1463,10 @@
 
 			} else {
 
-				if ( _canvas === undefined ) { _canvas = document.createElementNS( 'http://www.w3.org/1999/xhtml', 'canvas' ); }
+				if ( _canvas === undefined ) { 
+					_canvas = document.createElementNS( 'http://www.w3.org/1999/xhtml', 'canvas' ); 
+					_canvas.className = 'WebGL';
+				}
 
 				_canvas.width = image.width;
 				_canvas.height = image.height;
