@@ -74,7 +74,6 @@ let setBlock = function(x, y, z, color) {
 
 }
 moveCamera(400, 800, 100)
-sphere.position.y += 100
 
 function animation() {
     requestAnimationFrame(animation)
