@@ -30,7 +30,6 @@ ul
 {
     width: 95%;
     margin: 0 auto;
-    padding: 10px 15px;
 }
 
 
@@ -50,12 +49,24 @@ ul
 .section-header
 {
     width: 100%;
+    position: relative;
+    z-index: 1;
     flex-shrink: 1;
     background: linear-gradient(#2C2E3A, #4D5661);
+    #particles-js
+    {
+        position: absolute;
+        z-index: 0;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
     .section-inner
     {
         display: flex;
         align-items: center;
+        padding: 5px 15px;
     }
     &__burger
     {
@@ -75,6 +86,8 @@ ul
     {
         display: flex;
         align-items: center;
+        position: relative;
+        z-index: 1;
         &-icon
         {
             width: 50px;
@@ -91,7 +104,7 @@ ul
         {
             h3 
             {
-                color: #2C2E3A;
+                color: #4C2E3A;
                 font-size: 25px;
                 text-transform: uppercase;
             }
@@ -105,21 +118,84 @@ ul
 {
     flex-grow: 1;
     position: relative;
-    background-color: #B61924;
-    #particles-js
+    z-index: 1;
+    #particles-js-2
     {
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: #B61924;
-        z-index: 0;
     }
     &__messages
     {
         position: relative;
         z-index: 1;
+        width: 100%;
+        &-item
+        {
+            width: 100%;
+            padding: 10px;
+            &:nth-child(odd)
+            {
+                display: flex;
+                justify-content: flex-start;
+            }
+            &:nth-child(even)
+            {
+                display: flex;
+                justify-content: flex-end;
+            }
+            &:nth-child(even) .message-block
+            {
+                text-align: right;
+                display: inline-block;
+                color: #ffff;
+                font-size: 18px;
+                font-weight: bold;
+                background: #0083D0;
+                padding: 5px 20px;
+                border-radius: 10px;
+                position: relative;
+                &::before
+                {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    right: -7px !important;
+                    bottom: 0;
+                    width: 0;
+                    height: 0;
+                    border-style: solid;
+                    border-width: 5px 0 5px 15px;
+                    border-color: transparent transparent transparent #007bff;
+                }
+            }
+            &:nth-child(odd) .message-block{
+                display: inline-block;
+                color: #ffff;
+                font-size: 18px;
+                font-weight: bold;
+                background: #0083D0;
+                padding: 5px 20px;
+                text-align: left;
+                border-radius: 10px;
+                position: relative;
+                &::before
+                {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    left: -7px;
+                    bottom: 0;
+                    width: 0;
+                    height: 0;
+                    border-style: solid;
+                    border-width: 5px 15px 5px 0;
+                    border-color: transparent #0083D0 transparent transparent;
+                }
+            }
+        }
     }
 }
 // ===content ===
