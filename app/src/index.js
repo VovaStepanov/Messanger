@@ -1,6 +1,7 @@
 const { app, BrowserWindow } = require('electron');
 const path = require('path');
 
+
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
 if (require('electron-squirrel-startup')) { // eslint-disable-line global-require
   app.quit();
@@ -15,7 +16,10 @@ const createWindow = () => {
   });
 
   // and load the index.html of the app.
-  mainWindow.loadFile(path.join(__dirname, 'asrc/mainpage.html'));
+  //mainWindow.loadFile(path.join(__dirname, 'asrc/mainpage.html'));
+  // Сюда пишеш ссилку на ngrok
+  mainWindow.loadURL('http://2aaac485ec80.ngrok.io/src/asrc/mainpage.html');
+ 
   mainWindow.setMenuBarVisibility(false);
   // Open the DevTools.
   mainWindow.webContents.openDevTools();
